@@ -1,7 +1,7 @@
 ---
 title: "Lab 02 - Plastic waste"
-author: "Insert your name here"
-date: "Insert date here"
+author: "Annie Somerville"
+date: "02.01.2021"
 output: github_document
 ---
 

@@ -1,7 +1,7 @@
 Lab 02 - Plastic waste
 ================
-Insert your name here
-Insert date here
+Annie Somerville
+02.01.2021
 
 ## Load packages and data
 
