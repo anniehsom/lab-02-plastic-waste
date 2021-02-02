@@ -161,11 +161,24 @@ ggplot(data = plastic_waste,
 
 ### Exercise 6
 
-Remove this text, and add your answer for Exercise 6 here.
+There do seem to be clear distinctions between continents with respect
+to the association between plastic waste per capita and mismanaged
+plastic waste per captia. For example, it appears that Africa has a
+strong positive linear association between the two (the slope is very
+steep), whereas Europe’s positive linear association seems a bit weaker
+(the slope is less steep).
 
 ``` r
-# insert code here
+ggplot(data = plastic_waste, 
+       mapping = aes(x = plastic_waste_per_cap, 
+                     y = mismanaged_plastic_waste_per_cap,
+                     color = continent)) +
+  geom_point()
 ```
+
+    ## Warning: Removed 51 rows containing missing values (geom_point).
+
+![](lab-02_files/figure-gfm/plastic-waste-mismanaged-continent-1.png)<!-- -->
 
 ### Exercise 7
 
