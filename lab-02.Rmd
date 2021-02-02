@@ -119,8 +119,21 @@ ggplot(data = plastic_waste,
 
 ### Exercise 8
 
-Remove this text, and add your answer for Exercise 8 here.
+Could not figure out the "smooth" piece!
 
 ```{r recreate-viz}
-# insert code here
+plastic_waste$coastal_pop_prop <- plastic_waste$coastal_pop / plastic_waste$total_pop
+
+ggplot(data = plastic_waste, 
+       mapping = aes(x = coastal_pop_prop, 
+                     y = plastic_waste_per_cap,
+                     color = continent)) +
+  xlim(0,1.75) +
+  ylim(0,.7) +
+  geom_point() +
+  labs(title = "Plastic waste vs. coastal population proportion",
+       subtitle = "by continent", 
+       x = "Coastal population proportion",
+       y = "Plastic waste per capita",
+       color = "Continent")
 ```
