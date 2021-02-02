@@ -21,10 +21,13 @@ view (plastic_waste)
 
 ### Exercise 1
 
-Remove this text, and add your answer for Exercise 1 here.
+Most countries fall in the range of 0-1 kg/person, but Trinidad and Tobago has the highest amount of plastic waste per capita at 3.6 kg/person.
 
 ```{r plastic-waste-continent}
-# insert code here
+ggplot(data = plastic_waste, aes(x = plastic_waste_per_cap)) +
+  geom_histogram(binwidth = 0.2)
+plastic_waste %>%
+  filter(plastic_waste_per_cap > 3.5)
 ```
 
 ### Exercise 2
