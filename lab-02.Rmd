@@ -58,14 +58,22 @@ ggplot(data = plastic_waste,
 
 ### Exercise 3
 
-Remove this text, and add your answer for Exercise 3 here.
+```{r plastic-waste-boxplot}
+ggplot(data = plastic_waste, 
+       mapping = aes(x = continent, 
+                     y = plastic_waste_per_cap)) +
+  geom_boxplot()
+```
 
 ### Exercise 4
 
-Remove this text, and add your answer for Exercise 4 here.
+Boxplots and violin plots show means and distributions of plastic waste per capita. It's easier for me to see the individual points (or countries) within continents on the boxplot compared to the violin plot, and it's easier for me to see the frequency (via density) of values on the violin plot.
 
 ```{r plastic-waste-violin}
-# insert code here
+ggplot(data = plastic_waste, 
+       mapping = aes(x = continent, 
+                     y = plastic_waste_per_cap)) +
+  geom_violin()
 ```
 
 ### Exercise 5
