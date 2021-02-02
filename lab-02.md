@@ -145,11 +145,19 @@ ggplot(data = plastic_waste,
 
 ### Exercise 5
 
-Remove this text, and add your answer for Exercise 5 here.
+I don’t see a clear relationship between plastic waste per capita and
+mismanaged waste per capita - the relationship looks undefined.
 
 ``` r
-# insert code here
+ggplot(data = plastic_waste, 
+       mapping = aes(x = plastic_waste_per_cap, 
+                     y = mismanaged_plastic_waste_per_cap)) +
+  geom_point()
 ```
+
+    ## Warning: Removed 51 rows containing missing values (geom_point).
+
+![](lab-02_files/figure-gfm/plastic-waste-mismanaged-1.png)<!-- -->
 
 ### Exercise 6
 
