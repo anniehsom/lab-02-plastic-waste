@@ -32,8 +32,28 @@ plastic_waste %>%
 
 ### Exercise 2
 
+Color and fill were defined in (aes) because continent is part of the source dataframe, thus it has to be included in (aes). Alpha is a characteristic of the plotting geom instead of aesthetic because alpha is not part of the source dataframe.
+
 ```{r plastic-waste-density}
-# insert code here
+ggplot(data = plastic_waste, aes(x = plastic_waste_per_cap)) +
+  geom_density()
+
+ggplot(data = plastic_waste, 
+       mapping = aes(x = plastic_waste_per_cap, 
+                     color = continent)) +
+  geom_density()
+
+ggplot(data = plastic_waste, 
+       mapping = aes(x = plastic_waste_per_cap, 
+                     color = continent, 
+                     fill = continent)) +
+  geom_density()
+
+ggplot(data = plastic_waste, 
+       mapping = aes(x = plastic_waste_per_cap, 
+                     color = continent, 
+                     fill = continent)) +
+  geom_density(alpha = 0.3)
 ```
 
 ### Exercise 3
