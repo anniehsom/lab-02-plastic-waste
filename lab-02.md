@@ -182,15 +182,31 @@ ggplot(data = plastic_waste,
 
 ### Exercise 7
 
-Remove this text, and add your answer for Exercise 7 here.
+It looks like total population and plastic waste per capita may have a
+stronger linear relationship compared to coastal population and plastic
+waste per capita.
 
 ``` r
-# insert code here
+ggplot(data = plastic_waste, 
+       mapping = aes(x = total_pop, 
+                     y = plastic_waste_per_cap)) +
+  geom_point()
 ```
 
+    ## Warning: Removed 61 rows containing missing values (geom_point).
+
+![](lab-02_files/figure-gfm/plastic-waste-population-total-1.png)<!-- -->
+
 ``` r
-# insert code here
+ggplot(data = plastic_waste, 
+       mapping = aes(x = coastal_pop, 
+                     y = plastic_waste_per_cap)) +
+  geom_point()
 ```
+
+    ## Warning: Removed 51 rows containing missing values (geom_point).
+
+![](lab-02_files/figure-gfm/plastic-waste-population-coastal-1.png)<!-- -->
 
 ### Exercise 8
 
